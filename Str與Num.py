@@ -20,4 +20,4 @@ print( min(y,1,10) )    #取得參數內最小的值
 print( round(y))        #四捨五入
 print( floor(y) )       #無條件捨去法
 print( ceil(y) )        #無條件進位
-print( sqrt(y) )        #開根號123
+print( sqrt(y) )        #開根號
