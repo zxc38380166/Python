@@ -1,9 +1,11 @@
-class phone:
-    def __init__(self,os,number,is_waterproof): #self 為class的本身 (os,numer,is_waterproof為要傳入的值)
-        self.os = os    
+class Phone:
+    def __init__(self,os,number,is_waterproof): #self是物件的本身
+        self.os = os                    #定義物件本身的屬性
         self.number = number
         self.is_waterproof = is_waterproof
-phone1 = phone("ios",123,True)                  #將值帶入class中
-phone2 = phone("andriod",456,False) 
-print( phone1.os )  # 印出第一個物件的值
-print( phone2.os )  # 印出第二個物件的值
+
+phone1 = Phone("ios",123,True)  #帶入屬性的值
+phone2 = Phone("andriod",456,False)
+print(phone1.os)
+print(phone2.number)
+        
