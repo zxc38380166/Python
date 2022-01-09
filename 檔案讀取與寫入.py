@@ -23,5 +23,14 @@
 # file.close() #關掉開啟的檔案釋放資源
 
 # 以下為省略 close 釋放資源的寫法
-with open("openText.txt","w",encoding="utf-8") as file:
-    file.write("這是修改後的資料")
+# with open("openText.txt","w",encoding="utf-8") as file:
+#     file.write("這是修改後的資料")
+
+import json     #要讀取json格式必須先載入json模組
+with open("cofing.json",mode="r",encoding="utf-8") as file:
+    data = json.load(file)  #使用load()取得json資料並放入變數
+print(data["name"])
+data["name"]="new name"     #修改取得json資料的單一筆資料
+
+with open("cofing.json",mode="w",encoding="utf-8") as file:
+    json.dump(data,file)    #將修改完的資料再放回去json檔案
